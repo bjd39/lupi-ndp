@@ -1,0 +1,46 @@
+# generating varying drag data and training models afresh and saving
+models : ["lupi","nopi"]
+use_saved_models: false
+save_model: true
+# model details
+x_dim : 2
+obs_enc_h_dim : 16
+r_dim: 16
+pi_dim: 1
+pi_enc_h_dim: 16
+pi_r_dim: 16
+aggregators: ["logsumexp", "mean"]
+agg_h_dim: 16
+r_to_z_h_dim: 16
+z_dim: 16
+z_to_L_h_dim: 16
+L_dim: 16
+ode_h_dim: 16
+dec_h_dim: 16
+# training details
+lr : 1.e-3
+epochs : 100
+val_and_print : 10
+context_range : [5, 10]
+target_range : [15, 51]
+# data
+use_saved_data: false
+train_examples : 500
+train_val_split : 0.8
+eval_examples : 500
+simulator :
+  dt : 0.01
+  sampling_freq : 20
+  samples : 50
+fixed:
+  m1 : 1.
+  m2 : 1.
+  x1 : 1.
+  x2 : -1.
+  v1 : 0
+  v2 : 0
+  k : 0.5
+varying:
+  c : [0.5, 2.]
+eval_varying:
+  c : [0.5, 2.]

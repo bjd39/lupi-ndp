@@ -1,0 +1,18 @@
+# masses on springs with varying stiffness, k
+eval_examples : 500
+simulator :
+  dt : 0.01
+  sampling_freq : 20
+  samples : 50
+fixed:
+  m1 : 1.
+  m2 : 1.
+  x1 : 1.
+  x2 : -1.
+  v1 : 0
+  v2 : 0
+  c : 1.
+varying:
+  k : [0.2, 1.]
+eval_varying:
+  k : [0.2, 1.]

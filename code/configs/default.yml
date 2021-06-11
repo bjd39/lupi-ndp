@@ -1,0 +1,16 @@
+# masses on springs with varying drag, c
+models: "both"
+use_saved_models: true
+saved_models: ["lupi_varying_drag","nopi_varying_drag"]
+# data
+use_saved_data: true
+saved_train: "varying_drag_train" 
+saved_val: "varying_drag_validation"
+saved_eval: "varying_drag_evaluation"
+# evaluation
+z_samples : 32
+context_range : [5,10]
+target_range : [15,51]
+mse : true
+calibration : true
+sharpness : true
