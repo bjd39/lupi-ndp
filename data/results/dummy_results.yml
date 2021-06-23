@@ -1,0 +1,18 @@
+lupi:
+  eval_mode:
+    calibration: 0.2717168133216189
+    mse: 0.42071513418862894
+    sharpness: 0.0006009678505575211
+  train_mode:
+    calibration: 0.729048867624435
+    mse: 0.7358129429782116
+    sharpness: 0.3669777602625921
+nopi:
+  eval_mode:
+    calibration: 0.858455131931304
+    mse: 0.9637442995856
+    sharpness: 0.5284750249346016
+  train_mode:
+    calibration: 0.10700461277652162
+    mse: 0.5653248184097174
+    sharpness: 0.8215620033501221
