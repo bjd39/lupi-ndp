@@ -1,6 +1,8 @@
 notebooks/saves/
 sandbox.ipynb
 .ipynb_checkpoints/
+code/code_checker.ipynb
 iclr2021.zip
+*.pyc
 
 .idea/
