@@ -3,6 +3,8 @@ sandbox.ipynb
 .ipynb_checkpoints/
 code/code_checker.ipynb
 iclr2021.zip
+data/results/*
 *.pyc
+.DS_Store
 
 .idea/
