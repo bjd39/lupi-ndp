@@ -1,4 +1,6 @@
-# generating varying drag data and training models afresh and saving
+# meta
+verbose: true
+# generating varying drag data anew, training models afresh, and saving
 models : ["lupi","nopi"]
 use_saved_models: false
 save_model: true
@@ -19,12 +21,19 @@ ode_h_dim: 16
 dec_h_dim: 16
 # training details
 lr : 1.e-3
-epochs : 100
-val_and_print : 10
+epochs : 10
+val_and_print : 5
 context_range : [5, 10]
 target_range : [15, 51]
+# evaluation
+z_samples : 32
+mse : true
+calibration : true
+calibration_bins : 32
+sharpness : true
 # data
 use_saved_data: false
+task_type: "oscillators"
 train_examples : 500
 train_val_split : 0.8
 eval_examples : 500
