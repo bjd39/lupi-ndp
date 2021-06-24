@@ -42,8 +42,8 @@ simulator :
   sampling_freq : 20
   samples : 50
 fixed:
-  a : 2./3.
-  b : 4./3.
+  a : 0.667
+  b : 1.333
   c : 1
   d : 1
 varying:
