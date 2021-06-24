@@ -20,4 +20,4 @@ Neural ODE Processes approach the problem of meta-learning for dynamics using a 
 }
 ```
 
-This repository contains the code to run all of the experiments and produce all the plots included in the paper. A neat colab notebook will be added shortly.
+This repository contains the code to run all of the experiments included in the paper. The colab notebook reproduces the varying-stiffness experiment for the LUPI-NDP and can be easily modified to use the NDP or run the varying-drag experiment.
