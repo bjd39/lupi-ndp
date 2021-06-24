@@ -33,7 +33,7 @@ calibration_bins : 32
 sharpness : true
 # data
 use_saved_data: false
-task_type: "lotkavolterra"
+task_type: "lotka_volterra"
 train_examples : 500
 train_val_split : 0.8
 eval_examples : 500
