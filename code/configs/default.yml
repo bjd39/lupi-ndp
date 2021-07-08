@@ -1,5 +1,6 @@
 # meta
 verbose: true
+seed : 42
 # masses on springs with varying drag, c
 models: ["lupi","nopi"]
 use_saved_models: true
