@@ -1,0 +1,24 @@
+# meta
+verbose: true
+seed: 42
+# masses on springs with varying drag, c
+models: ["lupi","nopi"]
+use_saved_models: true
+saved_models: ["lupi_varying_drag","nopi_varying_drag"]
+# data
+use_saved_data: true
+saved_train: "varying_drag_train" 
+saved_val: "varying_drag_validation"
+saved_eval: "varying_drag_evaluation"
+simulator:
+  dt: 0.01
+  sampling_freq : 20
+  samples : 50
+# evaluation
+z_samples : 2
+context_range : [1,2]
+target_range : [4,5]
+mse : true
+calibration : true
+calibration_bins : 32
+sharpness : true
