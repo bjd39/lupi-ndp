@@ -37,10 +37,10 @@ config = yaml.safe_load(open(config_path))
 print(f"Config: {config}")
 
 # ------ Seeding
-if 'seed' in config.keys():
-    torch.manual_seed(config['seed'])
-    random.seed(config['seed'])
-    numpy.random.seed(config['seed'])
+if "seed" in config.keys():
+    torch.manual_seed(config["seed"])
+    random.seed(config["seed"])
+    numpy.random.seed(config["seed"])
 
 # ------ Loading saved models
 if config["use_saved_models"]:
@@ -305,9 +305,9 @@ with torch.no_grad():
                 try:
                     t_conf = Normal(tm_mean, tm_std).cdf(xs).numpy()
                     e_conf = Normal(em_mean, em_std).cdf(xs).numpy()
-                except: # low z-samples can be degenerate in prediction space
-                    t_conf = Normal(tm_mean, tm_std+1e-9).cdf(xs).numpy()
-                    e_conf = Normal(em_mean, em_std+1e-9).cdf(xs).numpy()
+                except:  # low z-samples can be degenerate in prediction space
+                    t_conf = Normal(tm_mean, tm_std + 1e-9).cdf(xs).numpy()
+                    e_conf = Normal(em_mean, em_std + 1e-9).cdf(xs).numpy()
                 # confidence to normalised cumulative histograms (= cumulative relative frequency)
                 t_values, t_edges = numpy.histogram(
                     t_conf, config["calibration_bins"], range=(0.0, 1.0)
